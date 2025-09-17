@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HEALTHCARE DATA SECURITY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Healthcare Data Security" name="keywords">
+    <meta content="Healthcare Data Security Services" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-shield-alt me-2"></i>HEALTHCARE DATA SECURITY</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link">Login</a>
+                        <a href="{{ url_for('register') }}" class="nav-item nav-link">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;"></h5>
+                    <h1 class="display-1 text-white mb-md-4">Healthcare Data Security Platform</h1>
+                    <div class="pt-2">
+                        <a href="{{ url_for('login') }}" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Login</a>
+                        <a href="{{ url_for('register') }}" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100 bg-light rounded p-4">
+                        <div class="d-flex flex-column justify-content-center h-100">
+                            <h3 class="text-primary mb-4">Protect Your Patient Data</h3>
+                            <p class="text-dark">Our comprehensive security solutions safeguard your most sensitive healthcare information from emerging threats.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Healthcare Data Security</h5>
+                        <h1 class="display-4">Introduction</h1>
+                    </div>
+                    <p>In today's digital healthcare environment, protecting sensitive patient information is more critical than ever. Healthcare providers face increasing challenges with cybersecurity threats targeting confidential medical records, personal data, and operational systems.</p>
+                    <div class="row g-3 pt-3">
+                        <p>Our healthcare data security platform utilizes advanced encryption, access controls, and continuous monitoring to safeguard your organization's digital assets. By implementing comprehensive security protocols and compliance measures, we help healthcare institutions maintain the confidentiality, integrity, and availability of critical data while meeting regulatory requirements like HIPAA, GDPR, and other regional healthcare privacy regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5"></h5>
+                <h1 class="display-4">Healthcare Data Security Solutions</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Data Encryption & Protection</h4>
+                        <p class="m-0">Our platform implements industry-leading encryption protocols for data at rest and in transit. We provide comprehensive protection for electronic health records (EHR), ensuring that sensitive patient information remains secure from unauthorized access while maintaining clinical workflow efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Access Control & Authentication</h4>
+                        <p class="m-0">Implement robust identity and access management solutions with multi-factor authentication, role-based access controls, and detailed audit trails. Our system ensures that only authorized personnel can access sensitive information, with comprehensive logging for compliance and security review.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Threat Detection & Response</h4>
+                        <p class="m-0">Our advanced monitoring systems provide real-time threat detection, identifying potential security breaches before they impact your systems. With automated alerts and rapid response protocols, we help healthcare organizations minimize the impact of security incidents and maintain operational continuity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Compliance Management</h4>
+                        <p class="m-0">Stay compliant with HIPAA, GDPR, and other healthcare data regulations through our comprehensive compliance management tools. Our platform includes automated compliance assessment, documentation support, and regular updates to keep pace with evolving regulatory requirements.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Risk Assessment & Management</h4>
+                        <p class="m-0">Our systematic approach to identifying and addressing security vulnerabilities helps healthcare organizations proactively manage risks. Regular security assessments, vulnerability scanning, and remediation planning ensure continuous improvement of your security posture.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Staff Training & Awareness</h4>
+                        <p class="m-0">Human factors remain a critical component of effective security. Our platform includes comprehensive training modules, simulated phishing exercises, and awareness campaigns to ensure your staff maintains security-conscious practices in their daily operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Healthcare Data Security</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

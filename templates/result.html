@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Security Analysis Result</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    /* Global Style */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f5ff;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Center the content */
+    .container {
+        width: 80%;
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Header styling */
+    .header {
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    /* Headings */
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 2.5rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #3498db, #2980b9);
+        border-radius: 2px;
+    }
+
+    h3 {
+        color: #34495e;
+        margin: 25px 0;
+        font-weight: 500;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 5px solid #3498db;
+    }
+
+    /* Result card */
+    .result-card {
+        padding: 20px;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        border: 1px solid #eaeaea;
+        transition: all 0.3s ease;
+    }
+
+    .result-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #3498db;
+    }
+
+    /* Button */
+    .button-container {
+        margin-top: 30px;
+    }
+
+    button {
+        text-decoration: none;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #2980b9, #1f618d);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+    }
+
+    button i {
+        margin-right: 8px;
+    }
+
+    /* Link button alignment */
+    a {
+        text-decoration: none;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Data Security Analysis</h1>
+            <p>Your healthcare data security assessment has been completed</p>
+        </div>
+        
+        <div class="result-card">
+            <div class="result-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>{{ prediction }}</h3>
+            <p>This assessment evaluates your healthcare data protection measures against industry standards including HIPAA compliance requirements, vulnerability assessment metrics, and best practices for healthcare information security.</p>
+        </div>
+        
+        <div class="button-container">
+            <a href="/predict_page">
+                <button><i class="fas fa-arrow-left"></i> Return to Assessment</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

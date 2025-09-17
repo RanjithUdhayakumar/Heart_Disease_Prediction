@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CARDIOCARE AI - About</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<style>
+       /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container1 {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+</style>
+<body>
+    
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm mb-5">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>CARDIOCARE AI</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{{ url_for('home') }}" class="nav-item nav-link">Home</a>
+                        <a href="#" class="nav-item nav-link active">About</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link">Login</a>
+                        <a href="{{ url_for('register') }}" class="nav-item nav-link">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container1">
+            <h1>Heart Disease Prediction</h1>
+            <form action="/result" method="post">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required>
+    
+                <label for="sex">Sex (1 = Male, 0 = Female):</label>
+                <input type="text" id="sex" name="sex" required>
+    
+                <label for="cp">Chest Pain Type (0-3):</label>
+                <input type="text" id="cp" name="cp" required>
+    
+                <label for="trestbps">Resting Blood Pressure:</label>
+                <input type="text" id="trestbps" name="trestbps" required>
+    
+                <label for="chol">Cholesterol:</label>
+                <input type="text" id="chol" name="chol" required>
+    
+                <label for="fbs">Fasting Blood Sugar (1 = True, 0 = False):</label>
+                <input type="text" id="fbs" name="fbs" required>
+    
+                <label for="restecg">Resting ECG Results (0-2):</label>
+                <input type="text" id="restecg" name="restecg" required>
+    
+                <label for="thalach">Maximum Heart Rate Achieved:</label>
+                <input type="text" id="thalach" name="thalach" required>
+    
+                <label for="exang">Exercise Induced Angina (1 = Yes, 0 = No):</label>
+                <input type="text" id="exang" name="exang" required>
+    
+                <label for="oldpeak">ST Depression Induced by Exercise:</label>
+                <input type="text" id="oldpeak" name="oldpeak" required>
+    
+                <label for="slope">Slope of the Peak Exercise ST Segment (0-2):</label>
+                <input type="text" id="slope" name="slope" required>
+    
+                <label for="ca">Number of Major Vessels Colored by Fluoroscopy (0-3):</label>
+                <input type="text" id="ca" name="ca" required>
+    
+                <label for="thal">Thalassemia (1-3):</label>
+                <input type="text" id="thal" name="thal" required>
+    
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+   
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Acute Myocardial Infarction</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
